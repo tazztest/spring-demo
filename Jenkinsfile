@@ -14,8 +14,8 @@ node {
            
           }
           stage('Building image'){
-                sh '''eval $(minikube docker-env)'''
-                sh 'mvn compile jib:dockerBuild'
+                sh '''eval $(minikube docker-env)
+                mvn compile jib:dockerBuild'''
           }
     }
 }
