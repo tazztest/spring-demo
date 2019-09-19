@@ -13,6 +13,8 @@ node {
                 junit '**/target/surefire-reports/*.xml'
            
           }
-       
+          stage('Building image'){
+                sh 'mvn compile jib:dockerBuild'
+          }
     }
 }
